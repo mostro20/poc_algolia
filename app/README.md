@@ -2,6 +2,9 @@
 
 _This project was generated with [create-instantsearch-app](https://github.com/algolia/create-instantsearch-app) by [Algolia](https://algolia.com)._
 
+## Notes
+API Key has been removed, so this will need to re-entered when running
+
 ## Get started
 
 To run this project locally, install the dependencies and run the local server:
