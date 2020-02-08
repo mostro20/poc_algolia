@@ -57,31 +57,43 @@ search.addWidgets([
   instantsearch.widgets.hitsPerPage({
   container: '#hits-per-page',
   items: [
-    { label: '8 hits per page', value: 8, default: true },
-    { label: '16 hits per page', value: 16 },
-    { label: '24 hits per page', value: 24 },
-    { label: '32 hits per page', value: 32 },
+    { label: '9 results per page', value: 9, default: true },
+    { label: '18 results per page', value: 18 },
+    { label: '27 results per page', value: 27 },
+    { label: '36 results per page', value: 36 },
   ],
   }),
 
   instantsearch.widgets.refinementList({
     container: '#facet1',
     attribute: 'Medium',
+    searchable: true,
+    searchablePlaceholder: 'Search media',
+    showMore: true,
   }),
 
   instantsearch.widgets.refinementList({
     container: '#facet2',
     attribute: 'Date Created',
+    searchable: true,
+    searchablePlaceholder: 'Search year',
+    showMore: true,
   }),
 
   instantsearch.widgets.refinementList({
     container: '#facet3',
     attribute: 'Artist Lastname',
+    searchable: true,
+    searchablePlaceholder: 'Search artist',
+    showMore: true,
   }),
 
   instantsearch.widgets.refinementList({
     container: '#facet4',
     attribute: 'Country',
+    searchable: true,
+    searchablePlaceholder: 'Search country',
+    showMore: true,
   })
 ]);
 

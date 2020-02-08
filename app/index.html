@@ -22,9 +22,13 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <h1>QAGOMA POC Internal Search</h1>
-        <div class="float-right" id="hits-per-page"></div>
-        <div id="current-refinements"></div>
+        <div class="header-box">
+          <h1>QAGOMA POC Internal Search</h1>
+        </div>
+        <div class="refine-results">
+          <div class="float-right" id="hits-per-page"></div>
+          <div id="current-refinements"></div>
+        </div>
       </div>
     </div>
     <div class="row">
@@ -35,31 +39,31 @@
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-sm-3">
-        <h2>Facets</h2>
+      <div class="col-sm-3 facet-col">
+        <h2 class="sr-only">Facets</h2>
 
-        <div class="card">
+        <div class="card border-top-0 border-left-0 border-right-0">
           <h3 class="card-title">Medium</h3>
           <div class="card-body">
             <div id="facet1"></div>
           </div>
         </div>
 
-        <div class="card">
+        <div class="card border-top-0 border-left-0 border-right-0">
           <h3 class="card-title">Year</h3>
           <div class="card-body">
             <div id="facet2"></div>
           </div>
         </div>
 
-        <div class="card">
+        <div class="card border-top-0 border-left-0 border-right-0">
           <h3 class="card-title">Artist</h3>
           <div class="card-body">
             <div id="facet3"></div>
           </div>
         </div>
 
-        <div class="card">
+        <div class="card border-top-0 border-left-0 border-right-0">
           <h3 class="card-title">Country</h3>
           <div class="card-body">
             <div id="facet4"></div>

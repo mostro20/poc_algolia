@@ -2,11 +2,65 @@ body { font-family: sans-serif; padding: 1em; }
 .ais-ClearRefinements { margin: 1em 0; }
 .ais-SearchBox { margin: 1em 0; }
 .ais-Pagination { margin-top: 1em; }
-.left-panel { float: left; width: 250px; }
-.right-panel { margin-left: 260px; }
 .ais-InstantSearch { max-width: 960px; overflow: hidden; margin: 0 auto; }
-.ais-Hits-item { margin-bottom: 1em; width: calc(50% - 1rem); }
-.ais-Hits-item img { margin-right: 1em; }
-.hit-name { margin-bottom: 0.5em; }
-.hit-description { color: #888; font-size: 14px; margin-bottom: 0.5em; }
-.img-thumb{max-width:100px;}
+
+/*header*/
+.header-box{}
+.header-box h1{
+  font-weight: 100;
+  font-size: 1.6em;
+  padding: 0.5em 0;
+}
+/*search results number box*/
+.refine-results{}
+
+#searchbox .ais-SearchBox .ais-SearchBox-form .ais-SearchBox-input{
+  padding: 0.6em 2em;
+  font-size: 1.2em;
+}
+
+/*set the global search and select inputs*/
+.ais-SearchBox-input,
+.refine-results .ais-HitsPerPage .ais-HitsPerPage-select{
+  font-size:0.9em;
+  color: #333;
+  border-color: #ccc;
+  font-weight: 100;
+}
+
+/* facet typography */
+.facet-col h3 { font-size: 1.2em; padding: 1em 1em 0 0; }
+/* facet card padding */
+.facet-col .card-body {  padding-top: 0; padding-left: 0; }
+.facet-col .card-body .ais-SearchBox { margin: 0.2em 0 0.5em; }
+.facet-col .card-body .ais-SearchBox .ais-SearchBox-input { font-size: 0.9em; }
+.facet-col .card { margin-bottom: 10px; }
+.facet-col .card ul li .ais-RefinementList-label,
+.facet-col .card ul li .ais-RefinementList-label .ais-RefinementList-labelText,
+.facet-col .card ul li .ais-RefinementList-label .ais-RefinementList-checkbox,
+.facet-col .card ul li .ais-RefinementList-label .ais-RefinementList-count {
+  font-size: 0.9em;
+}
+.facet-col .card button.ais-RefinementList-showMore{
+  background-color: white;
+  color: #666;
+}
+
+/*search results*/
+.ais-Hits-item {
+  margin-bottom: 1em;
+  width: calc(33% - 1rem);
+  border:none;
+  padding:0;
+  box-shadow: 0;
+}
+.ais-Hits-item .card {
+  min-height: 360px;
+  max-height: 360px;
+  overflow: hidden;
+}
+.ais-Hits-item .card .card-img-top {
+  max-height: 180px;
+  min-height: 180px;
+  object-fit: cover;
+}
