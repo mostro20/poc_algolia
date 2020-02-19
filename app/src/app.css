@@ -27,6 +27,15 @@ body { font-family: sans-serif; padding: 1em; }
   border-color: #ccc;
   font-weight: 100;
 }
+.btn-outline-secondary{
+  border-color:#ccc;
+}
+[data-toggle="collapse"].collapsed .if-not-collapsed {
+  display: none;
+}
+[data-toggle="collapse"]:not(.collapsed) .if-collapsed {
+  display: none;
+}
 
 /* facet typography */
 .facet-col h3 { font-size: 1.2em; padding: 1em 1em 0 0; }
@@ -45,7 +54,6 @@ body { font-family: sans-serif; padding: 1em; }
   background-color: white;
   color: #666;
 }
-
 /*search results*/
 .ais-Hits-item {
   margin-bottom: 1em;
@@ -56,11 +64,19 @@ body { font-family: sans-serif; padding: 1em; }
 }
 .ais-Hits-item .card {
   min-height: 360px;
-  max-height: 360px;
+  /*max-height: 360px;*/
   overflow: hidden;
+  color: #666;
 }
 .ais-Hits-item .card .card-img-top {
   max-height: 180px;
   min-height: 180px;
   object-fit: cover;
+}
+
+/*additional data view*/
+.card .collapse dl{
+  font-size: 0.9em;
+  padding: 1.2rem;
+  color: #666;
 }

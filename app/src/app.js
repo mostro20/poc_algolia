@@ -20,7 +20,7 @@ search.addWidgets([
     templates: {
       item: `
       <div class="card">
-        <a href="{{Image_url}}">
+        <a href="{{Image_url}}" target="_blank">
           <img src="{{Image_url}}" class="card-img-top" align="left" alt="{{name}}" />
         </a>
         <div class="card-body">
@@ -33,6 +33,18 @@ search.addWidgets([
             {{#helpers.highlight}}{ "attribute": "Artist Lastname" }{{/helpers.highlight}}
           </div>
           <div class="hit-price">{{Date Created}}</div>
+        </div>
+        <div class="collapse" id="more-details">
+          <dl>
+            <dt>Title</dt>
+            <dd>{{Title}}</dd>
+            <dt>Date Created</dt>
+            <dd>{{Date Created}}</dd>
+            <dt>Credit</dt>
+            <dd>{{Credit}}</dd>
+            <dt>Accession No.</dt>
+            <dd>{{Accession No}}</dd>
+          </dl>
         </div>
       </div>
       `,

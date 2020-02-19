@@ -27,6 +27,12 @@
         </div>
         <div class="refine-results">
           <div class="float-right" id="hits-per-page"></div>
+          <div class="float-right">
+            <button class="btn btn-outline-secondary btn-sm mr-2 collapsed" type="button" data-toggle="collapse" data-target="#more-details" aria-expanded="false" aria-controls="more-details">
+              <span class="if-collapsed">Show detailed view</span>
+              <span class="if-not-collapsed">Show summary view</span>
+            </button>
+          </div>
           <div id="current-refinements"></div>
         </div>
       </div>
@@ -72,7 +78,6 @@
 
       </div>
     <div class="col-sm-9">
-
       <div id="stats"></div>
       <div class="clearfix"></div>
       <div id="hits"></div>
