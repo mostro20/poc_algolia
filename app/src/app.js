@@ -6,7 +6,7 @@ const searchClient = algoliasearch(
 );
 
 const search = instantsearch({
-  indexName: 'poc_FederatedQAGOMA_v2',
+  indexName: 'poc_FederatedQAGOMA_v2a',
   searchClient,
 });
 
@@ -30,9 +30,8 @@ search.addWidgets([
             </a>
           </div>
           <div class="hit-description">
-            {{#helpers.highlight}}{ "attribute": "NamFirst" }{{/helpers.highlight}}
-            {{#helpers.highlight}}{ "attribute": "NamLast" }{{/helpers.highlight}}<br>
-            {{#helpers.highlight}}{ "attribute": "NamOrganisation" }{{/helpers.highlight}}
+            {{#helpers.highlight}}{ "attribute": "CreatorSummaryData" }{{/helpers.highlight}} |
+            {{#helpers.highlight}}{ "attribute": "CreDateCreated" }{{/helpers.highlight}}
           </div>
           <div class="hit-price">{{Date Created}}</div>
         </div>
@@ -43,11 +42,17 @@ search.addWidgets([
             <dt>Date Created</dt>
             <dd>{{CreDateCreated}}</dd>
             <dt>Artist life (earliest-latest)<dt>
-            <dd>{{BioBirthEarliestDate}} - {{BioDeathEarliestDate}}</dd>
+            <dd>
+              Likely: {{BioBirthDate}} - {{BioDeathDate}}<br>
+              Birth range: {{BioBirthEarliestDate}} - {{BioBirthLatestDate}}<br>
+              Death range: {{BioDeathEarliestDate}} - {{BioDeathLatestDate}}
+            </dd>
             <dt>Party type</dt>
             <dd>{{NamPartyType}}</dd>
             <dt>Accession No.</dt>
             <dd>{{TitAccessionNo}}</dd>
+            <dt>Size</dt>
+            <dd>{{PhyVerbatimMeasurementsA}}</dd>
             <dt>Object IRN</dt>
             <dd>{{ObjectIRN}}</dd>
             <dt>Credit</dt>
@@ -85,15 +90,14 @@ search.addWidgets([
   }),
 
 
-
-  instantsearch.widgets.refinementList({
+  /*instantsearch.widgets.refinementList({
     container: '#facet2',
     attribute: 'CreDateCreated',
     searchable: true,
     limit: 5,
     searchablePlaceholder: 'Search year',
     showMore: true,
-  }),
+  }),*/
 
   instantsearch.widgets.refinementList({
     container: '#facet3',
@@ -104,58 +108,58 @@ search.addWidgets([
     showMore: true,
   }),
 
-  instantsearch.widgets.refinementList({
+  /*instantsearch.widgets.refinementList({
     container: '#facet4',
     attribute: 'Country_tab',
     searchable: true,
     limit: 5,
     searchablePlaceholder: 'Search country',
     showMore: true,
-  }),
+  }),*/
 
-  instantsearch.widgets.refinementList({
+  /*instantsearch.widgets.refinementList({
     container: '#facet5',
     attribute: 'NamPartyType',
     searchable: true,
     searchablePlaceholder: 'Search party type',
     showMore: true,
-  }),
+  }),*/
 
-  instantsearch.widgets.refinementList({
+  /*instantsearch.widgets.refinementList({
     container: '#facet6',
     attribute: 'BioStates_tab',
     searchable: true,
     limit: 5,
     searchablePlaceholder: 'Search party type',
     showMore: true,
-  }),
+  }),*/
 
-  instantsearch.widgets.refinementList({
+  /*instantsearch.widgets.refinementList({
     container: '#facet7',
     attribute: 'BioQldArtist',
     searchable: true,
     limit: 5,
     searchablePlaceholder: 'Search party type',
     showMore: true,
-  }),
+  }),*/
 
-  instantsearch.widgets.refinementList({
+  /*instantsearch.widgets.refinementList({
     container: '#facet8',
     attribute: 'BioCulturalIdentity1_tab',
     searchable: true,
     limit: 5,
     searchablePlaceholder: 'Search party type',
     showMore: true,
-  }),
+  }),*/
 
-  instantsearch.widgets.refinementList({
+  /*instantsearch.widgets.refinementList({
     container: '#facet9',
     attribute: 'BioCulturalIdentity2_tab',
     searchable: true,
     limit: 5,
     searchablePlaceholder: 'Search party type',
     showMore: true,
-  }),
+  }),*/
 
   instantsearch.widgets.refinementList({
     container: '#facet10',
